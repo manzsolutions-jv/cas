@@ -66,7 +66,7 @@ public class CasSupportJdbcAuditConfiguration {
 
     @Bean
     @RefreshScope
-    public AuditTrailManager jdbcAuditTrailManager() {
+    public JdbcAuditTrailManager jdbcAuditTrailManager() {
         val jdbc = casProperties.getAudit().getJdbc();
         val t = new JdbcAuditTrailManager(inspektrAuditTransactionTemplate());
         t.setCleanupCriteria(auditCleanupCriteria());
